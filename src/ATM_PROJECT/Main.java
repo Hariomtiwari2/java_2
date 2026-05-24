@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        ATM atm = new ATM(0 );
+        ATM atm = new ATM();
 
 
     }
@@ -25,8 +25,8 @@ class ATM {
             System.out.println("Enter correct pin!!!");
         }
     }
-    public ATM ( double balance ) {
-        this.balance = balance;
+    public ATM (  ) {
+
 
         checkPin();
     }
