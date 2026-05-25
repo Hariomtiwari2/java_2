@@ -1,7 +1,10 @@
-package ATM_PROJECT;
+package oops;
 
 class Father {
     String car = "BMW";
+    public Father(String car) {
+        this.car = car;
+    }
 
     public void method1() {
         System.out.println(car);
