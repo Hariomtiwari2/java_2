@@ -1,10 +1,13 @@
 package oops;
 
+import java.security.PublicKey;
+
 class Father {
-    String car = "BMW";
-    public Father(String car) {
-        this.car = car;
+    String car ;
+    public Father() {
+        System.out.println("Father class constructor is running");
     }
+
 
     public void method1() {
         System.out.println(car);
@@ -12,7 +15,14 @@ class Father {
 }
 
 class Son  extends  Father {
-    String car = "Audi";
+    String car ;
+    String bike;
+
+    public Son() {
+        super();
+        System.out.println("Son class constructor is running");
+    }
+
 
     public void method1() {
         System.out.println("Son car:" + car);
@@ -32,8 +42,8 @@ public class Super {
 
         Father f = new Father();
         Son s = new Son();
-        //s.method1();
-        s.method2();
+
+
 
 
     }
