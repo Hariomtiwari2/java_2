@@ -6,7 +6,7 @@ public class TCF {
     public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
 
-        boolean z = true;
+       /* boolean z = true;
 
         while (z) {
             System.out.println("Value of A: ");
@@ -28,6 +28,13 @@ public class TCF {
                 System.out.println("Yeh toh print hoga hi");
             }
 
+        } */
+        System.out.print("Enter your age: ");
+        int age  = sc.nextInt();
+        if (age < 18) {
+            throw new RuntimeException("You cant vote!!!!!!!!!");
+        }else {
+            System.out.println("You can vote!!!!!!!!!!!!!");
         }
     }
 }
