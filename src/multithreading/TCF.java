@@ -3,26 +3,31 @@ package multithreading;
 import java.util.Scanner;
 
 public class TCF {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
 
-        for (int i=0;i<3;i++) {
-        System.out.println("Value of a: ");
-        int a = sc.nextInt();
-        System.out.println("Value of b: ");
-        int b = sc.nextInt();
+        boolean z = true;
 
+        while (z) {
+            System.out.println("Value of A: ");
+            int A = sc.nextInt();
+            System.out.println("Value of B: ");
+            int B = sc.nextInt();
 
-        try {
-            int x = a/b;
-            System.out.println(x);
+            try {
+                int x = A/B;
+                System.out.println(x);
+                z=false;
+            }
+            catch (ArithmeticException ae) {
+                System.out.println(ae.getMessage());
+                Thread.sleep(3000);
+                z=true;
+            }
+            finally {
+                System.out.println("Yeh toh print hoga hi");
+            }
+
         }
-        catch (ArithmeticException ae){
-            System.out.println(ae);
-        }
-        finally {
-            System.out.println("This is going to be printed anyway");
-        } }
-
     }
 }
